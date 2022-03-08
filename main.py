@@ -22,7 +22,8 @@ def get_html(url, params=None):
 
 
 def get_content(html):
-    soup = BeautifulSoup(html, 'html.parser')
+    #soup = BeautifulSoup(html, 'html.parser')
+    soup = BeautifulSoup(html, 'lxml')
     items = soup.find_all("div", class_="b-doctor-card")
     #print("items = ", items)
     doctors=[]
